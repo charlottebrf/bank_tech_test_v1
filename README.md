@@ -1,5 +1,7 @@
 # Bank Tech Test Readme
 
+[![Build Status](https://travis-ci.org/charlottebrf/bank_tech_test_v1.svg?branch=master)](https://travis-ci.org/charlottebrf/bank_tech_test_v1)
+
 A practice bank tech test given in Week 10 of Makers Academy to practice OO and TDD skills.
 
 This is version 1 of this tech test, which will be deleted and repeated. The purpose of this test is to work alone, review my own code so you can practice reflecting on and improving my own work.
