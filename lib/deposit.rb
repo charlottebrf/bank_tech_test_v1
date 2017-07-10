@@ -10,4 +10,8 @@ class Deposit
     @credit = client_credit
   end
 
+  def add_date
+    @date.push(Time.now.strftime('%d/%m/%Y'))
+  end
+
 end
