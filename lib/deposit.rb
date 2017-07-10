@@ -14,4 +14,8 @@ class Deposit
     @date.push(Time.now.strftime('%d/%m/%Y'))
   end
 
+  def add_credit_to_balance(balance)
+    @credit + balance
+  end
+
 end

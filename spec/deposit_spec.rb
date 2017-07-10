@@ -25,4 +25,10 @@ describe Deposit do
     end
   end
 
+  describe '#add_credit_to_balance' do
+    it 'adds the client credit to the balance' do
+      deposit.add_credit(10)
+      expect(deposit.add_credit_to_balance(5)).to equal 15
+    end
+  end
 end
