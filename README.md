@@ -68,7 +68,7 @@ The Client however needed to have an interface class, the Bank Account class, th
 
 
 
-# Class Descriptions
+## Class Descriptions
 Here are the descriptions of my classes which show the responsibility of each class within the domain of the program.
 
 **Bank Account**
