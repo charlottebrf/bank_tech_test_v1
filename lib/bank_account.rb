@@ -11,5 +11,4 @@ class BankAccount
     deposit.add_date
     @balance = deposit.credit + @balance
   end
-
 end

@@ -44,6 +44,28 @@
         1,
         1,
         null,
+        null
+      ],
+      "/Users/charlottefereday/Development/Week_10/bank_tech_test_v1/spec/bank_account_statement_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/charlottefereday/Development/Week_10/bank_tech_test_v1/lib/bank_account_statement.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
         null,
         null
       ],
@@ -95,6 +117,6 @@
         null
       ]
     },
-    "timestamp": 1499704473
+    "timestamp": 1499705281
   }
 }

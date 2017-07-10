@@ -12,5 +12,5 @@ class Deposit
 
   def add_date
     @date.push(Time.now.strftime('%d/%m/%Y'))
-  end 
+  end
 end
