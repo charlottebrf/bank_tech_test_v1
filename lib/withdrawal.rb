@@ -10,4 +10,7 @@ class Withdrawal
     @debit = client_debit
   end
 
+  def add_date
+    @date = Time.now.strftime('%d/%m/%Y')
+  end
 end

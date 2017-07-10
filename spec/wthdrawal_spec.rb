@@ -15,7 +15,13 @@ describe Withdrawal do
 
   describe '#add_debit' do
     it 'stores the debit quantity of the client' do
-      expect(withdrawal.add_debit(10)).to equal 10 
+      expect(withdrawal.add_debit(10)).to equal 10
+    end
+  end
+
+  describe '#add_date' do
+    it 'stores the date of when a withdrawal was made' do
+      expect(withdrawal.add_date).equal? Time.now.strftime('%d/%m/%Y')
     end
   end
 end
