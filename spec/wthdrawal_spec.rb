@@ -12,4 +12,10 @@ describe Withdrawal do
       expect(withdrawal.debit).equal? 0
     end
   end
+
+  describe '#add_debit' do
+    it 'stores the debit quantity of the client' do
+      expect(withdrawal.add_debit(10)).to equal 10 
+    end
+  end
 end
