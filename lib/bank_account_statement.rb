@@ -1,7 +1,7 @@
 class BankAccountStatement
-  attr_reader :statement_collector
+  attr_reader :deposit_statement_collector
 
   def initialize
-    @statement_collector = []
+    @deposit_statement_collector = { date: '', credit: '', balance: '' }
   end
 end
