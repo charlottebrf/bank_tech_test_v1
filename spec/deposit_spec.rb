@@ -13,4 +13,18 @@ describe Deposit do
     end
   end
 
+  describe '#add_credit' do
+    it 'stores the credit quanity of the client' do
+      expect(deposit.add_credit(10)).to equal 10
+    end
+
+    xit 'stores the date of when a deposit was made' do
+      expect(deposit.make_deposit).to equal ['14/01/2012']
+    end
+
+    xit 'stores the date of when a deposit was made' do
+      expect(deposit.make_deposit).to equal ['14/01/2012']
+    end
+  end
+
 end
