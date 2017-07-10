@@ -8,5 +8,4 @@ describe BankAccountStatement do
       expect(bank_account_statement.statement_collector).equal? []
     end
   end
-
-end 
+end

@@ -11,6 +11,10 @@ describe BankAccount do
     it 'is initialized with an injected instance of the Deposit class' do
       expect(bank_account.deposit).to equal bank_account.deposit
     end
+
+    it 'is initialized with an injected instance of the BankAccountStatement class' do
+      expect(bank_account.statement).to equal bank_account.statement
+    end
   end
 
   describe '#make_deposit' do
