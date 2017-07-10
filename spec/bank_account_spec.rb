@@ -28,4 +28,16 @@ describe BankAccount do
       expect(bank_account.collect_statements).equal? [{date: '10/07/17', credit: 10, balance: 10}]
     end
   end
+
+  describe '#make_withdrawal' do
+    it 'deducts the debit from the account balance' do
+      bank_account.make_withdrawal(10)
+      expect(bank_account.balance).to equal -10
+    end
+
+    it 'stores all the information about a deposit inside statement' do
+      bank_account.make_withdrawal(10)
+      expect(bank_account.collect_statements).equal? [{date: '10/07/17', debit: 10, balance: -10}]
+    end
+  end
 end
