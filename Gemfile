@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 ruby '2.4.0'
 gem 'nokogiri'
-gem 'rake'
 gem 'reek'
 gem 'rspec'
 gem 'rubocop'
