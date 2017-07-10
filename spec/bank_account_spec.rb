@@ -25,7 +25,7 @@ describe BankAccount do
 
     it 'stores all the information about a deposit inside statement' do
       bank_account.make_deposit(10)
-      expect(bank_account.statement).equal? {date: '10/07/17', credit: 10, balance: 10}
+      expect(bank_account.collect_statements).equal? [{date: '10/07/17', credit: 10, balance: 10}]
     end
   end
 end
