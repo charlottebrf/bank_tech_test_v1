@@ -5,7 +5,7 @@ describe Deposit do
 
   describe '#initialize' do
     it 'is initialized with a date' do
-      expect(deposit.date).equal? []
+      expect(deposit.date).equal? ''
     end
 
     it 'is initialized with a credit default value of 0' do
@@ -21,7 +21,7 @@ describe Deposit do
 
   describe '#add_date' do
     it 'stores the date of when a deposit was made' do
-      expect(deposit.add_date).equal? [Time.now.strftime('%d/%m/%Y')]
+      expect(deposit.add_date).equal? Time.now.strftime('%d/%m/%Y')
     end
   end
 end

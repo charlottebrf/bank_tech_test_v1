@@ -2,7 +2,7 @@ class Deposit
   attr_reader :date, :credit
 
   def initialize
-    @date = []
+    @date = ''
     @credit = 0
   end
 
@@ -11,6 +11,6 @@ class Deposit
   end
 
   def add_date
-    @date.push(Time.now.strftime('%d/%m/%Y'))
+    @date = Time.now.strftime('%d/%m/%Y')
   end
 end

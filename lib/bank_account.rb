@@ -8,8 +8,9 @@ class BankAccount
   end
 
   def make_deposit(client_credit)
-    deposit.add_credit(client_credit)
-    deposit.add_date
+    @statement.deposit_statement_collector[:credit] = deposit.add_credit(client_credit)
+    @statement.deposit_statement_collector[:date] = deposit.add_date
     @balance = deposit.credit + @balance
+    @statement.deposit_statement_collector[:balance] = @balance
   end
 end
