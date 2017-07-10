@@ -76,7 +76,6 @@ PLATFORMS
 
 DEPENDENCIES
   nokogiri
-  rake
   reek
   rspec
   rubocop
