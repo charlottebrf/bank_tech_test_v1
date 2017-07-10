@@ -17,5 +17,4 @@ class Deposit
   def add_credit_to_balance(balance)
     @credit + balance
   end
-
 end
