@@ -37,7 +37,7 @@ describe BankAccount do
 
     it 'stores all the information about a deposit inside statement' do
       bank_account.make_withdrawal(10)
-      expect(bank_account.collect_statements).equal? [{date: '10/07/17', debit: 10, balance: -10}]
+      expect(bank_account.collect_statements).equal? [{date: '10/07/17', debit: 10.0, balance: -10.0}]
     end
   end
 
@@ -47,7 +47,7 @@ describe BankAccount do
       bank_account.make_deposit(20)
       bank_account.make_deposit(5)
       expect{ bank_account.print_bank_statement }.to output(/date || credit || debit || balance
-      \11\/07\/2017 || || 10.00 || 10.00\n \11\/07\/2017 ||20 || || 30\n \11\/07\/2017 ||5 || || 35\n/).to_stdout
+      \11\/07\/2017 || || 10.00 || 10.00\n \11\/07\/2017 ||20.00 || || 30.00\n \11\/07\/2017 ||5.00 || || 35.00\n/).to_stdout
     end
   end
 end
