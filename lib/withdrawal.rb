@@ -7,7 +7,7 @@ class Withdrawal
   end
 
   def add_debit(client_debit)
-    @debit = client_debit
+    @debit = client_debit.round(2)
   end
 
   def add_date

@@ -7,7 +7,7 @@ class Deposit
   end
 
   def add_credit(client_credit)
-    @credit = client_credit
+    @credit = client_credit.round(2)
   end
 
   def add_date

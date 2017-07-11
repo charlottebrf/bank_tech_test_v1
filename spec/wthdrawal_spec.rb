@@ -15,7 +15,7 @@ describe Withdrawal do
 
   describe '#add_debit' do
     it 'stores the debit quantity of the client' do
-      expect(withdrawal.add_debit(10)).to equal 10
+      expect(withdrawal.add_debit(10)).to equal 10.0
     end
   end
 

@@ -15,7 +15,7 @@ describe Deposit do
 
   describe '#add_credit' do
     it 'stores the credit quanity of the client' do
-      expect(deposit.add_credit(10)).to equal 10
+      expect(deposit.add_credit(10)).to equal 10.0
     end
   end
 
