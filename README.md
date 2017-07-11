@@ -28,6 +28,42 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 
+# Installation & Tests
+
+Technologies
+-----
+
+## Install
+
+* Bundle install Gemfile dependencies
+
+```bash
+ $ bundle
+ $ gem install bundle
+
+```
+
+* Ruby v '2.4.0'
+
+```bash
+$ rvm install 2.4.0
+$ rvm use 2.4.0
+
+```
+
+## Testing suite
+-----
+```
+RSpec
+SimpleCov
+Rubocop
+```
+
+Test coverage
+-----
+```
+Test coverage: 98.50%
+```
 
 # My Approach
 
