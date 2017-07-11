@@ -24,4 +24,6 @@ class BankAccount
     @statement.withdrawal_statement_collector[:balance] = @balance
     @collect_statements << @statement
   end
+
+  # TODO make sure to change the quantities to 2 decimal places
 end

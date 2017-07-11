@@ -14,4 +14,13 @@ describe BankAccountStatement do
       # expect(bank_account_statement.withdrawal_statement_collector).equal? { date: '', debit: 0, balance: 0}
     end
   end
+
+  xdescribe '#print_deposit_statement' do
+    it 'prints a single deposit statement' do
+      collector = bank_account_statement.withdrawal_statement_collector
+      collector = { date: '11/07/2017', credit: 20.00, balance: 25.00}
+      expect(bank_account_statement.print_deposit_statement).to output(/date || credit || debit || balance
+      \11\/07\/2017 || 20.00 || || 25.00\n/).to_stdout
+    end
+  end
 end
