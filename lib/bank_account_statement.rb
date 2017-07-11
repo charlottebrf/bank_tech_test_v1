@@ -1,9 +1,16 @@
 class BankAccountStatement
-  attr_accessor :deposit_statement_collector, :withdrawal_statement_collector
-
   def initialize
-    @deposit_statement_collector = { date: '', credit: 0, balance: 0 }
-    @withdrawal_statement_collector = { date: '', debit: 0, balance: 0}
+    @transaction = nil
+  end
+
+  def record(withdrawal_or_deposit)
+    @transaction = withdrawal_or_deposit
+    self
+  end
+
+  def self.build(amount, transaction_class)
+    transaction = transaction_class.new(amount)
+    new.record(transaction)
   end
 
   def print_deposit_statement

@@ -17,6 +17,7 @@ describe BankAccount do
     end
   end
 
+  # Understands addition of credit AND storing of information
   describe '#make_deposit' do
     it 'adds the credit to the account balance' do
       bank_account.make_deposit(10)
@@ -25,7 +26,7 @@ describe BankAccount do
 
     it 'stores all the information about a deposit inside statement' do
       bank_account.make_deposit(10)
-      expect(bank_account.collect_statements).equal? [{date: '10/07/17', credit: 10, balance: 10}]
+      expect(bank_account.collect_statements).to eq [{date: '10/07/17', credit: 10, balance: 10}]
     end
   end
 

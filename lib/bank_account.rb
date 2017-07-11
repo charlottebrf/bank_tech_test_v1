@@ -9,20 +9,18 @@ class BankAccount
     @collect_statements = []
   end
 
-  def make_deposit(client_credit)
-    @statement.deposit_statement_collector[:credit] = deposit.add_credit(client_credit)
-    @statement.deposit_statement_collector[:date] = deposit.add_date
-    @balance = deposit.credit + @balance
-    @statement.deposit_statement_collector[:balance] = @balance
-    @collect_statements << @statement
+  def make_deposit(client_credit, deposit_class = Deposit)
+    @balance += client_credit
+    deposit = deposit_class.new(client_credit, @balance) # => { time: Time.now, amount: client_credit, balance: @balance }
+
+    @collect_statements << @statement.record(deposit)
   end
 
-  def make_withdrawal(client_debit)
-    @statement.withdrawal_statement_collector[:debit] = withdrawal.add_debit(client_debit)
-    @statement.withdrawal_statement_collector[:date] = withdrawal.add_date
-    @balance = @balance - withdrawal.debit
-    @statement.withdrawal_statement_collector[:balance] = @balance
-    @collect_statements << @statement
+  def make_withdrawal(client_debit, withdrawal_class = Withdrawal)
+    @balance -= client_debit
+    withdrawal = withdrawal_class.new(client_debit, @balance)
+
+    @collect_statements << @statement.record(withdrawal)
   end
 
   def print_bank_statement
