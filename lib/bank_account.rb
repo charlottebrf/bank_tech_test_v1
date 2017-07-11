@@ -25,5 +25,14 @@ class BankAccount
     @collect_statements << @statement
   end
 
-  # TODO make sure to change the quantities to 2 decimal places
+  def print_bank_statement
+    @statement.print_statement_header
+    @collect_statements.each do |statement|
+      if statement.deposit_statement_collector[:credit] != nil
+        statement.print_deposit_statement
+      elsif statement.withdrawal_statement_collector[:debit] != nil
+        statement.print_withdrawal_statement
+      end
+    end
+  end
 end
