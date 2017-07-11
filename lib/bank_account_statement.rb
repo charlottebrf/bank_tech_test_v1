@@ -13,4 +13,8 @@ class BankAccountStatement
   def print_withdrawal_statement
     puts "#{withdrawal_statement_collector[:date]} || || #{withdrawal_statement_collector[:debit]} || #{deposit_statement_collector[:balance]}"
   end
+
+  def print_statement_header
+    puts "date || credit || debit || balance"
+  end
 end

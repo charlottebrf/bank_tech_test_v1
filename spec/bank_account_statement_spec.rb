@@ -31,4 +31,10 @@ describe BankAccountStatement do
     end
   end
 
+  describe '#print_statement_header' do
+    it 'prints the first header line of the statement' do
+      expect { bank_account_statement.print_statement_header }.to output(/date || credit || debit || balance/).to_stdout
+    end
+  end
+
 end
